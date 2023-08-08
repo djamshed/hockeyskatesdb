@@ -1,2 +1,2 @@
-# hockeyskates
+# hockeyskatesdb
 Hockey skates database
