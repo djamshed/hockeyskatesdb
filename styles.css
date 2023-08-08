@@ -1,0 +1,88 @@
+body {
+  color: #4b5258;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding-bottom: 40px;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 1em;
+  text-align: center;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.filter-buttons {
+  font-size: 70%;
+  display: flex;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+  background: rgb(28, 184, 65);
+  /* this is a green */
+}
+
+.button-error {
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20);
+  /* this is an orange */
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221);
+  /* this is a light blue */
+}
+
+table {
+  position: relative;
+  font-size: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.pure-table th {
+  background-color: #e0e0e0;
+  position: sticky;
+  top: 0;
+  padding: 1em;
+}
+
+table td .price,
+table td .model {
+  text-align: center;
+}
+
+table td .model {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+td.latest .annotation {
+  color: lightcoral;
+}

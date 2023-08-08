@@ -1,107 +1,649 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
+  <body>
+    <header>
+      <h1>A list of ice hockey skate lineups from BAUER, CCM and TRUE</h1>
+    </header>
 
-<body>
+    <div class="content">
+      <p>
+        Have a feedback or a suggestion to improve this list?
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScCRtOoEsZeBgXXsy4LtRmANfesunn2GCA1g3N-7dlLaHufDQ/viewform?usp=sf_link"
+          >Let me know!</a
+        >
+      </p>
 
-  <h1>A comprehensive list of ice hockey skates</h1>
+      <table class="pure-table pure-table-bordered">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Model</th>
+            <th>$0-$200</th>
+            <th>$200-$400</th>
+            <th>$400-$600</th>
+            <th>$600-$800</th>
+            <th>$800-$1000</th>
+            <th>$1000+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="4">2023</td>
+            <td>Bauer Vapor</td>
+            <td>
+              <div class="model">X</div>
+              <div class="price">$199.99</div>
+            </td>
 
-  <table cellspacing="0" cellpadding="0">
-    <thead>
-      <tr>
-        <th>Year</th>
-        <th>Line</th>
-        <th>under 200</th>
-        <th>200-350</th>
-        <th>350-500</th>
-        <th>500-650</th>
-        <th>650-800</th>
-        <th>800-950</th>
-        <th>950+</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowspan="4">2023</td>
-        <td>Bauer Vapor</td>
-        <td>X 199.99</td>
-        <td>X3 299.99</td>
-        <td>X4 499.99</td>
-        <td>X5 PRO 799.99</td>
-        <td>HYPERLITE2 1,049.99</td>
-      </tr>
-      <tr>
-        <td>CCM Jetspeed</td>
-        <td>FT670 259.99</td>
-        <td>FT680 449.99</td>
-        <td dir="ltr">FT6 769.99</td>
-        <td dir="ltr">FT6 Pro 1,149.99</td>
-      </tr>
-      <tr>
-        <td>True HZRDUS</td>
-        <td>5X 279.99</td>
-        <td>7X 449.99</td>
-        <td dir="ltr">9X 759.99</td>
-      </tr>
-      <tr>
-        <td>True Catalyst</td>
-        <td>5 279.99</td>
-        <td>7 449.99</td>
-        <td dir="ltr">9 759.99</td>
-      </tr>
-      <tr>
-        <td rowspan="3">2022</td>
-        <td>Bauer Supreme</td>
-        <td>M1 199.99</td>
-        <td>M3 279.99</td>
-        <td>M4 449.99</td>
-        <td dir="ltr">M5 PRO 769.99</td>
-        <td dir="ltr">MACH 1,009.99</td>
-      </tr>
-      <tr>
-        <td>CCM Tacks</td>
-        <td>AS-560 179.99</td>
-        <td>AS-580 349.99</td>
-        <td>AS-590 539.99</td>
-        <td dir="ltr">AS-V 759.99</td>
-        <td dir="ltr">AS-V Pro 1,119.99</td>
-      </tr>
-      <tr>
-        <td>AS-550 89.99</td>
-        <td>AS-570 279.99</td>
-      </tr>
-      <tr>
-        <td rowspan="4">2021</td>
-        <td>Bauer Vapor</td>
-        <td>3.5 199.99</td>
-        <td dir="ltr">3.7 279.99</td>
-        <td dir="ltr">3X 449.99</td>
-        <td dir="ltr">3X PRO 749.99</td>
-        <td dir="ltr">HYPERLITE 1,009.99</td>
-      </tr>
-      <tr>
-        <td>CCM Jetspeed</td>
-        <td dir="ltr">FT475 199.99</td>
-        <td dir="ltr">FT485 299.99</td>
-        <td dir="ltr">FT4 699.99</td>
-        <td dir="ltr">FT4 Pro 999.99</td>
-      </tr>
-      <tr>
-        <td dir="ltr">CCM Ribcor</td>
-        <td dir="ltr">88K 349.00</td>
-        <td dir="ltr">90K 549.00</td>
-        <td dir="ltr">100K Pro 999.99</td>
-      </tr>
-      <tr>
-        <td dir="ltr">CCM Ribcor</td>
-        <td dir="ltr">86K 229.00</td>
-      </tr>
-    </tbody>
-  </table>
+            <td>
+              <div class="model">X3</div>
+              <div class="price">$299.99</div>
+            </td>
+            <td>
+              <div class="model">X4</div>
+              <div class="price">$499.99</div>
+            </td>
+            <td>
+              <div class="model">X5 PRO</div>
+              <div class="price">$799.99</div>
+            </td>
+            <td></td>
+            <td
+              class="latest"
+              title="the latest top model in the BAUER VAPOR lineup"
+            >
+              <div class="model">
+                HYPERLITE2
+                <span class="annotation">&#9733;</span>
+              </div>
+              <div class="price">$1,049.99</div>
+            </td>
+          </tr>
+          <tr>
+            <td>CCM Jetspeed</td>
+            <td></td>
+            <td>
+              <div class="model">FT670</div>
+              <div class="price">$259.99</div>
+            </td>
+            <td>
+              <div class="model">FT680</div>
+              <div class="price">$449.99</div>
+            </td>
+            <td>
+              <div class="model">FT6</div>
+              <div class="price">$769.99</div>
+            </td>
+            <td></td>
+            <td
+              class="latest"
+              title="the latest top model in the CCM Jetspeed lineup"
+            >
+              <div class="model">
+                FT6 PRO <span class="annotation">&#9733;</span>
+              </div>
+              <div class="price">$1,149.99</div>
+            </td>
+          </tr>
+          <tr>
+            <td>True HZRDUS</td>
+            <td></td>
+            <td>
+              <div class="model">5X</div>
+              <div class="price">$279.99</div>
+            </td>
+            <td>
+              <div class="model">7X</div>
+              <div class="price">$449.99</div>
+            </td>
+            <td class="latest">
+              <div class="model">9X</div>
+              <div class="price">$759.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>True Catalyst</td>
+            <td></td>
+            <td>
+              <div class="model">5</div>
+              <div class="price">$279.99</div>
+            </td>
+            <td>
+              <div class="model">7</div>
+              <div class="price">$449.99</div>
+            </td>
+            <td class="latest">
+              <div class="model">9</div>
+              <div class="price">$759.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="2">2022</td>
+            <td>Bauer Supreme</td>
+            <td>
+              <div class="model">M1</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">M3</div>
+              <div class="price">$279.99</div>
+            </td>
+            <td>
+              <div class="model">M4</div>
+              <div class="price">$ 449.99</div>
+            </td>
+            <td>
+              <div class="model">M5 MACH</div>
+              <div class="price">$769.99</div>
+            </td>
+            <td></td>
+            <td
+              class="latest"
+              title="the latest top model in the BAUER SUPREME lineup"
+            >
+              <div class="model">
+                MACH <span class="annotation">&#9733;</span>
+              </div>
+              <div class="price">$1,009.99</div>
+            </td>
+          </tr>
+          <tr>
+            <td>CCM Tacks</td>
+            <td>
+              <div class="model">AS-550</div>
+              <div class="price">$89.99</div>
+              <div class="model">AS-560</div>
+              <div class="price">$179.99</div>
+            </td>
+            <td>
+              <div class="model">AS-570</div>
+              <div class="price">$279.99</div>
+              <div class="model">AS-580</div>
+              <div class="price">$349.99</div>
+            </td>
+            <td>
+              <div class="model">AS-590</div>
+              <div class="price">$539.99</div>
+            </td>
+            <td>
+              <div class="model">AS-V</div>
+              <div class="price">$759.99</div>
+            </td>
+            <td></td>
+            <td
+              class="latest"
+              title="the latest top model in the CCM Tacks lineup"
+            >
+              <div class="model">
+                AS-V PRO <span class="annotation">&#9733;</span>
+              </div>
+              <div class="price">$1,119.99</div>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3">2021</td>
+            <td>Bauer Vapor</td>
+            <td>
+              <div class="model">3.5</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">3.7</div>
+              <div class="price">$279.99</div>
+            </td>
+            <td>
+              <div class="model">3X</div>
+              <div class="price">$449.99</div>
+            </td>
+            <td>
+              <div class="model">3X PRO</div>
+              <div class="price">$749.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">HYPERLITE</div>
+              <div class="price">$1,009.99</div>
+            </td>
+          </tr>
+          <tr>
+            <td>CCM Jetspeed</td>
+            <td>
+              <div class="model">FT475</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">FT485</div>
+              <div class="price">$299.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">FT4</div>
+              <div class="price">$699.99</div>
+            </td>
+            <td>
+              <div class="model">FT4 PRO</div>
+              <div class="price">$999.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM Ribcor</td>
+            <td></td>
+            <td>
+              <div class="model">86K</div>
+              <div class="price">$229.00</div>
+              <div class="model">88K</div>
+              <div class="price">$349.00</div>
+            </td>
+            <td>
+              <div class="model">90K</div>
+              <div class="price">$549.00</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">100K PRO</div>
+              <div class="price">$999.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="2">2020</td>
+            <td>Bauer Supreme</td>
+            <td>
+              <div class="model">S35</div>
+              <div class="price">$159.99</div>
+            </td>
+            <td>
+              <div class="model">S37</div>
+              <div class="price">$229.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">3S PRO</div>
+              <div class="price">$629.99</div>
+            </td>
+            <td>
+              <div class="model">UltraSonic</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM SuperTacks</td>
+            <td>
+              <div class="model">9350</div>
+              <div class="price">$69.99</div>
+              <div class="model">9360</div>
+              <div class="price">$159.99</div>
+            </td>
+            <td>
+              <div class="model">9370</div>
+              <div class="price">$229.99</div>
+            </td>
+            <td>
+              <div class="model">9380</div>
+              <div class="price">$359.99</div>
+            </td>
+            <td>
+              <div class="model">AS3</div>
+              <div class="price">$629.99</div>
+            </td>
+            <td>
+              <div class="model">AS3 PRO</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">2019</td>
+            <td>Bauer Vapor</td>
+            <td>
+              <div class="model">NS</div>
+              <div class="price">$59.99</div>
+              <div class="model">NSX</div>
+              <div class="price">$99.99</div>
+              <div class="model">2.5</div>
+              <div class="price">$159.99</div>
+            </td>
+            <td>
+              <div class="model">2.7</div>
+              <div class="price">$229.99</div>
+            </td>
+            <td>
+              <div class="model">2.9</div>
+              <div class="price">$359.99</div>
+            </td>
+            <td>
+              <div class="model">2X</div>
+              <div class="price">$629.99</div>
+            </td>
+            <td>
+              <div class="model">2X PRO</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM JetSpeed</td>
+            <td></td>
+            <td>
+              <div class="model">FT460</div>
+              <div class="price">$229.99</div>
+              <div class="model">FT470</div>
+              <div class="price">$329.99</div>
+            </td>
+            <td>
+              <div class="model">FT480</div>
+              <div class="price">$549.99</div>
+            </td>
+            <td>
+              <div class="model">FT490</div>
+              <div class="price">$629.99</div>
+            </td>
+            <td>
+              <div class="model">FT2</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM Ribcor</td>
+            <td>
+              <div class="model">74K</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">76K</div>
+              <div class="price">$299.99</div>
+            </td>
+            <td>
+              <div class="model">78K</div>
+              <div class="price">$419.99</div>
+            </td>
+            <td>
+              <div class="model">80K</div>
+              <div class="price">$749.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">2018</td>
+            <td>Bauer Supreme</td>
+            <td>
+              <div class="model">S25</div>
+              <div class="price">$149.99</div>
+            </td>
+            <td>
+              <div class="model">S27</div>
+              <div class="price">$209.99</div>
+            </td>
+            <td>
+              <div class="model">S29</div>
+              <div class="price">$329.99</div>
+            </td>
+            <td>
+              <div class="model">2S</div>
+              <div class="price">$599.99</div>
+            </td>
+            <td>
+              <div class="model">2S PRO</div>
+              <div class="price">$899.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Bauer Nexus</td>
+            <td></td>
+            <td>
+              <div class="model">N2700</div>
+              <div class="price">$229.99</div>
+              <div class="model">N2900</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">2N</div>
+              <div class="price">$699.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
 
-</body>
+          <tr>
+            <td>CCM SuperTacks</td>
+            <td>
+              <div class="model">9040</div>
+              <div class="price">$79.99</div>
+              <div class="model">9050</div>
+              <div class="price">$149.99</div>
+            </td>
+            <td>
+              <div class="model">9060</div>
+              <div class="price">$209.99</div>
+              <div class="model">9070</div>
+              <div class="price">$299.99</div>
+              <div class="model">9080</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td>
+              <div class="model">9090</div>
+              <div class="price">$549.99</div>
+            </td>
+            <td>
+              <div class="model">AS1</div>
+              <div class="price">$849.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
 
+          <tr>
+            <td rowspan="3">2017</td>
+            <td>Bauer Vapor</td>
+            <td>
+              <div class="model">X300</div>
+              <div class="price">$79.99</div>
+              <div class="model">X400</div>
+              <div class="price">$129.99</div>
+            </td>
+
+            <td>
+              <div class="model">X500</div>
+              <div class="price">$209.99</div>
+              <div class="model">X600</div>
+              <div class="price">$329.99</div>
+              <div class="model">X700</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td>
+              <div class="model">X800</div>
+              <div class="price">$549.99</div>
+            </td>
+            <td>
+              <div class="model">X900</div>
+              <div class="price">$749.99</div>
+            </td>
+            <td>
+              <div class="model">1X</div>
+              <div class="price">$899.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM JetSpeed</td>
+            <td>
+              <div class="model">FT340</div>
+              <div class="price">$69.99</div>
+              <div class="model">FT350</div>
+              <div class="price">$149.99</div>
+            </td>
+            <td>
+              <div class="model">FT360</div>
+              <div class="price">$209.99</div>
+              <div class="model">FT370</div>
+              <div class="price">$299.99</div>
+              <div class="model">FT380</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">FT390</div>
+              <div class="price">$699.99</div>
+            </td>
+            <td>
+              <div class="model">FT1</div>
+              <div class="price">$899.99</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>CCM Ribcor</td>
+            <td>
+              <div class="model">64K</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">66K</div>
+              <div class="price">$299.99</div>
+              <div class="model">68K</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">70K</div>
+              <div class="price">$699.99</div>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td rowspan="3">2016</td>
+            <td>Bauer Supreme</td>
+            <td>
+              <div class="model">S140</div>
+              <div class="price">$69.99</div>
+              <div class="model">S150</div>
+              <div class="price">$149.99</div>
+              <div class="model">S160</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">S170</div>
+              <div class="price">$299.99</div>
+            </td>
+            <td>
+              <div class="model">S180</div>
+              <div class="price">$499.99</div>
+            </td>
+            <td>
+              <div class="model">S190</div>
+              <div class="price">$729.99</div>
+            </td>
+            <td>
+              <div class="model">1S</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Bauer Nexus</td>
+            <td>
+              <div class="model">N6000</div>
+              <div class="price">$99.99</div>
+              <div class="model">N7000</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td></td>
+            <td>
+              <div class="model">N8000</div>
+              <div class="price">$399.99</div>
+            </td>
+            <td>
+              <div class="model">N9000</div>
+              <div class="price">$599.99</div>
+            </td>
+            <td>
+              <div class="model">1N</div>
+              <div class="price">$949.99</div>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>CCM SuperTacks</td>
+            <td>
+              <div class="model">2092</div>
+              <div class="price">$79.99</div>
+              <div class="model">3092</div>
+              <div class="price">$149.99</div>
+              <div class="model">4092</div>
+              <div class="price">$199.99</div>
+            </td>
+            <td>
+              <div class="model">5092</div>
+              <div class="price">$299.99</div>
+            </td>
+            <td>
+              <div class="model">6092</div>
+              <div class="price">$449.99</div>
+            </td>
+            <td>
+              <div class="model">UltraTacks</div>
+              <div class="price">$699.99</div>
+            </td>
+            <td>
+              <div class="model">SuperTacks</div>
+              <div class="price">$899.99</div>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        This table includes information and regular prices in US dollars sourced
+        from BAUER, CCM, TRUE hockey catalogs, as well as well-known hockey
+        retailers such as
+        <a href="https://www.hockeyworld.com/" target="_blank"
+          >https://www.hockeyworld.com/</a
+        >
+        and
+        <a href="https://www.purehockey.com/" target="_blank"
+          >https://www.purehockey.com/</a
+        >. If you have a suggestion or feedback, please
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScCRtOoEsZeBgXXsy4LtRmANfesunn2GCA1g3N-7dlLaHufDQ/viewform?usp=sf_link"
+        >
+          let me know</a
+        >!
+      </p>
+    </div>
+  </body>
 </html>
