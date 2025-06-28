@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f6f6f6;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.filter-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.filter-section button,
+.filter-section input {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+.tabs button.active {
+  border-color: black;
+}
+.skate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.skate-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+}
+.skate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.skate-card h2 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.skate-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}

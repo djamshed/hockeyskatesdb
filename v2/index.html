@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey Skates</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>HOCKEY SKATES</h1>
+    <div class="filter-section">
+      <p><strong>What kind of hockey player are you?</strong></p>
+      <button onclick="setLevel('')" id="level-all" class="active">All</button>
+      <button onclick="setLevel('Recreational')" id="level-recreational">
+        Just starting out (Recreational)
+      </button>
+      <button onclick="setLevel('Performance')" id="level-performance">
+        Playing 2-3 times a week (Performance)
+      </button>
+      <button onclick="setLevel('Elite')" id="level-elite">Elite</button>
+      <div class="tabs">
+        <button onclick="setYear(2024)" class="active" id="tab-2024">
+          2024 Models
+        </button>
+        <button onclick="setYear(2023)" id="tab-2023">2023 Models</button>
+        <button onclick="setYear('older')" id="tab-older">
+          2022 and Older
+        </button>
+      </div>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by model name"
+        oninput="filterSkates()"
+      />
+    </div>
+    <div class="skate-grid" id="skateGrid">
+      <!-- Skates will be loaded here -->
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
