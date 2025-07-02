@@ -1,6 +1,6 @@
 body {
   color: #4b5258;
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   padding-bottom: 40px;
 }
 
@@ -53,6 +53,17 @@ table td .model {
   padding-top: 10px;
 }
 
-.latest-annotation {
-  color: lightcoral;
+.model.latest {
+  color: crimson;
+}
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+  color: -webkit-link;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }

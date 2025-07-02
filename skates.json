@@ -33,7 +33,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "LS1",
     "stiffness_rating": null,
-    "launch_price_usd": 229.99,
+    "launch_price_usd": 279.99,
     "current_price_usd": 229.99,
     "key_features": "40oz felt tongue with mesh metatarsal guard, microfiber liner, Form Fit footbed",
     "notes": "Mid-tier model offering enhanced performance features",
@@ -79,7 +79,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "LS Pulse",
     "stiffness_rating": null,
-    "launch_price_usd": 599.99,
+    "launch_price_usd": 749.99,
     "current_price_usd": 599.99,
     "key_features": "48oz felt tongue with injected insert, Hydrolite liner, asymmetrical toe cap",
     "notes": "High-performance model with advanced features",
@@ -102,7 +102,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "LS Pulse TI",
     "stiffness_rating": null,
-    "launch_price_usd": 949.99,
+    "launch_price_usd": 1009.99,
     "current_price_usd": 949.99,
     "key_features": "Aerolite 2.0 tongue, Lock-Fit Pro liner, Hyperflex outsole and facing",
     "notes": "Top-of-the-line model with premium features",
@@ -125,7 +125,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "XS Stainless Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 179.99,
+    "launch_price_usd": 199.99,
     "current_price_usd": 89.99,
     "key_features": "One-piece boot, TotalDri liner, heat moldable, Ortholite footbed",
     "notes": "Mid-range entry into one-piece boot design",
@@ -171,7 +171,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "Step Steel (+4mm)",
     "stiffness_rating": 180,
-    "launch_price_usd": 449.99,
+    "launch_price_usd": 699.99,
     "current_price_usd": 449.99,
     "key_features": "One-piece boot Speed, enhanced performance, Step Steel runners",
     "notes": "Elite model built for power and speed",
@@ -183,7 +183,7 @@
     "newer_model": null,
     "id": "ccm-jetspeed-ft4-2021"
   },
-  "ccm-jetspeed-ft4pro-2021": {
+  "ccm-jetspeed-ft4-pro-2021": {
     "brand": "CCM",
     "model": "JetSpeed FT4 Pro",
     "release_year": 2021,
@@ -194,7 +194,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "Step Blacksteel",
     "stiffness_rating": 195,
-    "launch_price_usd": 949.99,
+    "launch_price_usd": 999.99,
     "current_price_usd": 949.99,
     "key_features": "One-piece boot Speed, NHL-caliber materials, Blacksteel runners",
     "notes": "Top-tier pro level skate",
@@ -204,7 +204,7 @@
     "higher_model": "2023-CCM-JetSpeedFT670",
     "older_model": null,
     "newer_model": null,
-    "id": "ccm-jetspeed-ft4pro-2021"
+    "id": "ccm-jetspeed-ft4-pro-2021"
   },
   "ccm-ribcor-86k-2021": {
     "brand": "CCM",
@@ -332,7 +332,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "S.Stainless Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 349.99,
+    "launch_price_usd": 279.99,
     "current_price_usd": 349.99,
     "key_features": "40oz felt tongue with mesh metatarsal guard, hydrophobic microfiber liner, lightweight TPR outsole",
     "notes": "Mid-tier model offering enhanced performance features",
@@ -378,7 +378,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "Carbonlite, Pulse TI, Pulse",
     "stiffness_rating": null,
-    "launch_price_usd": 599.99,
+    "launch_price_usd": 769.99,
     "current_price_usd": 599.99,
     "key_features": "52oz Classic Pro felt tongue, Lock Fit liner, Reflex tendon guard",
     "notes": "High-performance model with advanced features",
@@ -401,7 +401,7 @@
     "blade_holder": "TUUK Lightspeed Edge",
     "steel_type": "Carbonlite, Pulse TI, Pulse",
     "stiffness_rating": null,
-    "launch_price_usd": 749.99,
+    "launch_price_usd": 1009.99,
     "current_price_usd": 749.99,
     "key_features": "Powercoil tongue, Lock Fit Pro liner, Reflex tendon guard",
     "notes": "Top-of-the-line model with premium features",
@@ -413,7 +413,7 @@
     "newer_model": null,
     "id": "bauer-supreme-mach-2022"
   },
-  "ccm-tacks-as550-2022": {
+  "ccm-tacks-as-550-2022": {
     "brand": "CCM",
     "model": "Tacks AS-550",
     "release_year": 2022,
@@ -434,9 +434,9 @@
     "higher_model": "2022-CCM-TacksAS-560",
     "older_model": null,
     "newer_model": "2022-CCM-TacksAS-560",
-    "id": "ccm-tacks-as550-2022"
+    "id": "ccm-tacks-as-550-2022"
   },
-  "ccm-tacks-as560-2022": {
+  "ccm-tacks-as-560-2022": {
     "brand": "CCM",
     "model": "Tacks AS-560",
     "release_year": 2022,
@@ -457,9 +457,9 @@
     "higher_model": "2022-CCM-TacksAS-570",
     "older_model": "2022-CCM-TacksAS-550",
     "newer_model": "2022-CCM-TacksAS-570",
-    "id": "ccm-tacks-as560-2022"
+    "id": "ccm-tacks-as-560-2022"
   },
-  "ccm-tacks-as570-2022": {
+  "ccm-tacks-as-570-2022": {
     "brand": "CCM",
     "model": "Tacks AS-570",
     "release_year": 2022,
@@ -480,9 +480,9 @@
     "higher_model": "2022-CCM-TacksAS-580",
     "older_model": "2022-CCM-TacksAS-560",
     "newer_model": "2022-CCM-TacksAS-580",
-    "id": "ccm-tacks-as570-2022"
+    "id": "ccm-tacks-as-570-2022"
   },
-  "ccm-tacks-as580-2022": {
+  "ccm-tacks-as-580-2022": {
     "brand": "CCM",
     "model": "Tacks AS-580",
     "release_year": 2022,
@@ -503,9 +503,9 @@
     "higher_model": "2022-CCM-TacksAS-590",
     "older_model": "2022-CCM-TacksAS-570",
     "newer_model": "2022-CCM-TacksAS-590",
-    "id": "ccm-tacks-as580-2022"
+    "id": "ccm-tacks-as-580-2022"
   },
-  "ccm-tacks-as590-2022": {
+  "ccm-tacks-as-590-2022": {
     "brand": "CCM",
     "model": "Tacks AS-590",
     "release_year": 2022,
@@ -516,7 +516,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "Step Steel XS",
     "stiffness_rating": null,
-    "launch_price_usd": 589.99,
+    "launch_price_usd": 539.99,
     "current_price_usd": 294.99,
     "key_features": "Premium-grade steel runners, reinforced LITE Core composite boot",
     "notes": "High-performance model with advanced features",
@@ -526,7 +526,7 @@
     "higher_model": "2022-CCM-TacksAS-V",
     "older_model": "2022-CCM-TacksAS-580",
     "newer_model": "2022-CCM-TacksAS-V",
-    "id": "ccm-tacks-as590-2022"
+    "id": "ccm-tacks-as-590-2022"
   },
   "ccm-tacks-as-v-2022": {
     "brand": "CCM",
@@ -574,10 +574,10 @@
     "newer_model": null,
     "id": "ccm-tacks-asvpro-2022"
   },
-  "bauer-vapor-x-2011": {
+  "bauer-vapor-x-2023": {
     "brand": "Bauer",
     "model": "Vapor X",
-    "release_year": 2011,
+    "release_year": 2023,
     "player_level": "Recreational",
     "fit_options": "Regular",
     "weight_size9": null,
@@ -585,7 +585,7 @@
     "blade_holder": "TUUK Lightspeed 2",
     "steel_type": "TUUK LS2",
     "stiffness_rating": null,
-    "launch_price_usd": 299.99,
+    "launch_price_usd": 199.99,
     "current_price_usd": null,
     "key_features": "Heat-moldable boot, anatomical heel support",
     "notes": "Discontinued model",
@@ -595,7 +595,7 @@
     "higher_model": "2021-Bauer-VaporX3.5",
     "older_model": null,
     "newer_model": null,
-    "id": "bauer-vapor-x-2011"
+    "id": "bauer-vapor-x-2023"
   },
   "bauer-vapor-x3-2023": {
     "brand": "Bauer",
@@ -654,7 +654,7 @@
     "blade_holder": "Powerfly",
     "steel_type": "Fly-TI or Fly-X",
     "stiffness_rating": null,
-    "launch_price_usd": 849.99,
+    "launch_price_usd": 799.99,
     "current_price_usd": 849.99,
     "key_features": "Elite-level support, customizable steel options",
     "notes": "High-performance model",
@@ -677,7 +677,7 @@
     "blade_holder": "Powerfly",
     "steel_type": "Fly-TI or Fly-X",
     "stiffness_rating": null,
-    "launch_price_usd": 999.99,
+    "launch_price_usd": 1049.99,
     "current_price_usd": 999.99,
     "key_features": "Maximum agility, advanced blade holder",
     "notes": "Top-of-the-line model",
@@ -700,7 +700,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "CCM XS Stainless Steel",
     "stiffness_rating": 150,
-    "launch_price_usd": 219.99,
+    "launch_price_usd": 259.99,
     "current_price_usd": 153.99,
     "key_features": "One-piece boot, HD microfiber liner, Ortholite Ultra footbed",
     "notes": "Entry-level model with solid performance features",
@@ -930,7 +930,7 @@
     "blade_holder": "Tuuk LS Edge",
     "steel_type": "LS+ Stainless Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 319.99,
+    "launch_price_usd": 299.99,
     "current_price_usd": 319.99,
     "key_features": "Digi Comp boot, Pro Stock 40oz felt tongue, Sublimated liner",
     "notes": "Entry-level model with comfort-focused features",
@@ -976,7 +976,7 @@
     "blade_holder": "PowerFly",
     "steel_type": "Fly-TI or Fly-X (sold separately)",
     "stiffness_rating": null,
-    "launch_price_usd": 689.99,
+    "launch_price_usd": 809.99,
     "current_price_usd": 689.99,
     "key_features": "Carbon CURV boot, Reflex Classic 52oz felt tongue, Lock-Fit Pro liner, PowerFly holder",
     "notes": "High-performance model with advanced features",
@@ -999,7 +999,7 @@
     "blade_holder": "PowerFly",
     "steel_type": "Fly-X or Fly-TI (sold separately)",
     "stiffness_rating": null,
-    "launch_price_usd": 949.99,
+    "launch_price_usd": 1069.99,
     "current_price_usd": 949.99,
     "key_features": "Carbon Connect outsole, Powercoil tongue, AMP Flex Facing, Lock-Fit Pro liner",
     "notes": "Top-of-the-line model with premium features",
@@ -1022,7 +1022,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "Stainless Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 299.99,
+    "launch_price_usd": 279.99,
     "current_price_usd": 299.99,
     "key_features": "Ergonomic boot shape, ADPT Memory Foam, HD Microfiber liner",
     "notes": "Entry-level model with comfort-focused features",
@@ -1045,7 +1045,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "XS PRO Stainless Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 449.99,
+    "launch_price_usd": 399.99,
     "current_price_usd": 449.99,
     "key_features": "One-piece boot, Flex Tendon 3.0, Multi-density ankle foams",
     "notes": "Mid-tier model offering enhanced performance features",
@@ -1068,7 +1068,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "STEP Steel",
     "stiffness_rating": null,
-    "launch_price_usd": 599.99,
+    "launch_price_usd": 549.99,
     "current_price_usd": 599.99,
     "key_features": "RFM composite boot, Multi-density memory foam, TotalDri Pro liner",
     "notes": "High-performance model with advanced features",
@@ -1091,7 +1091,7 @@
     "blade_holder": "SpeedBlade XS",
     "steel_type": "STEP V-Steel",
     "stiffness_rating": 190,
-    "launch_price_usd": 949.99,
+    "launch_price_usd": 849.99,
     "current_price_usd": 949.99,
     "key_features": "One-piece boot power, ADPT Comfort tongue with FlexMotion, TotalDri Pro liner",
     "notes": "Top-tier model designed for elite skaters",
@@ -1137,7 +1137,7 @@
     "blade_holder": "Shift Max",
     "steel_type": "Shift Max 3CR",
     "stiffness_rating": null,
-    "launch_price_usd": 199.99,
+    "launch_price_usd": 279.99,
     "current_price_usd": 199.99,
     "key_features": "NEUROFIT+ one-piece shell, anatomical fit, lightweight agility",
     "notes": "Entry-level model with comfort-focused features",
@@ -1160,7 +1160,7 @@
     "blade_holder": "Shift Max",
     "steel_type": "Shift Max 7CR",
     "stiffness_rating": null,
-    "launch_price_usd": 299.99,
+    "launch_price_usd": 449.99,
     "current_price_usd": 299.99,
     "key_features": "NEUROFIT shell, CARV toe cap, poured PU side panels",
     "notes": "Mid-tier model offering enhanced performance features",
@@ -1206,7 +1206,7 @@
     "blade_holder": "Shift Max",
     "steel_type": "Shift Max Black DLC",
     "stiffness_rating": null,
-    "launch_price_usd": 949.99,
+    "launch_price_usd": 1079.99,
     "current_price_usd": 949.99,
     "key_features": "NEUROFIT+ shell, high-polish DLC finish, enhanced durability",
     "notes": "Top-of-the-line model with premium features",
@@ -1217,5 +1217,104 @@
     "older_model": null,
     "newer_model": null,
     "id": "true-catalyst-9x4-2024"
+  },
+
+  "bauer-vapor-fly30-2025": {
+    "brand": "Bauer",
+    "model": "Vapor Fly30",
+    "release_year": 2025,
+    "player_level": "Recreational",
+    "fit_options": "D, EE",
+    "weight_size9": 806,
+    "boot_material": "Digi Comp",
+    "blade_holder": "TUUK Lightspeed Edge",
+    "steel_type": "LS+ Stainless Steel",
+    "stiffness_rating": null,
+    "launch_price_usd": 319.99,
+    "current_price_usd": 319.99,
+    "key_features": "Memory foam ankle padding, lightweight flexible boot, quick-release EDGE holder",
+    "notes": "Comfort-focused entry-level skate in the new Vapor line",
+    "description": "The Vapor FLY30 was built for comfort and performance with a forgiving Digi Comp boot, memory‑foam padding around the ankles, and NHL‑caliber quick‑release EDGE holder for easy steel swaps.",
+    "player_description": "Great for the rec player who wants pro-tech vibes without sacrificing comfort—slides smooth and keeps you chasing pucks, not grinding feet.",
+    "id": "bauer-vapor-fly30-2025"
+  },
+  "bauer-vapor-fly40-2025": {
+    "brand": "Bauer",
+    "model": "Vapor Fly40",
+    "release_year": 2025,
+    "player_level": "Performance",
+    "fit_options": "Fit 1, 2, 3",
+    "weight_size9": null,
+    "boot_material": "Likely 3D CURV Composite",
+    "blade_holder": "PowerFly",
+    "steel_type": "Fly-X or Fly-TI",
+    "stiffness_rating": null,
+    "launch_price_usd": 579.99,
+    "current_price_usd": 579.99,
+    "key_features": "High-end tech from elite line, closer to pro-level",
+    "notes": "Bridge between entry-level comfort and pro features",
+    "description": "Positioned above the Fly30, the FLY40 brings best‑in‑class tech from elite Vapor line—think enhanced boot structure and better blade systems—for players wanting more pop.",
+    "player_description": "For the beer‑leaguer who sneaks in extra shift time—these bring a little extra juice in turns and sprints without showing off too much.",
+    "lower_model": "bauer-vapor-fly30-2025",
+    "id": "bauer-vapor-fly40-2025"
+  },
+
+  "bauer-vapor-flypro-2025": {
+    "brand": "Bauer",
+    "model": "Vapor FlyPro",
+    "release_year": 2025,
+    "player_level": "Elite",
+    "fit_options": "Fit 1, 2, 3",
+    "weight_size9": 776,
+    "boot_material": "3D Lasted CURV Composite",
+    "blade_holder": "PowerFly",
+    "steel_type": "Fly-X or Fly-TI",
+    "stiffness_rating": null,
+    "launch_price_usd": 919.99,
+    "current_price_usd": 919.99,
+    "key_features": "HyperFlex facing, CURV composite, pro-stock 48oz felt tongue",
+    "notes": "Elite skate built for elite-level skating",
+    "description": "The Vapor FLYPRO features a thermoformable CURV composite boot, HyperFlex flex zones in the facing, pro-stock 48‑oz tongue, LockFit Pro liner, and Digi Comp outsole—engineered for explosive agility.",
+    "player_description": "If you warm up like you're in the AHL, these are your skates. Light, quick, and packed with tech—even if your Sunday stats say otherwise.",
+    "id": "bauer-vapor-flypro-2025"
+  },
+  "bauer-vapor-flylite-2025": {
+    "brand": "Bauer",
+    "model": "Vapor FlyLite",
+    "release_year": 2025,
+    "player_level": "Elite",
+    "fit_options": "Fit 1, 2, 3",
+    "weight_size9": null,
+    "boot_material": "Carbon CURV Composite",
+    "blade_holder": "PowerFly",
+    "steel_type": "Fly-X or Fly-TI",
+    "stiffness_rating": null,
+    "launch_price_usd": 1179.99,
+    "current_price_usd": 1179.99,
+    "key_features": "Lightest elite skate, full elite-level Vapor tech",
+    "notes": "Top-tier performance skate",
+    "description": "The Vapor FLYLITE brings all the Vapor tech up to elite level—with even lighter build, max quickness materials, and next‑gen energy return for ultra‑high‑end performance.",
+    "player_description": "The kind of skate you’d flex on the rec league Instagram feed—speedy, flashy, and unapologetically overbuilt for the beer-sesh.",
+    "lower_model": "bauer-vapor-flypro-2025",
+    "id": "bauer-vapor-flylite-2025"
+  },
+
+  "ccm-tacks-652-2024": {
+    "brand": "CCM",
+    "model": "Tacks 652",
+    "release_year": 2024,
+    "player_level": "Elite",
+    "fit_options": "Regular, Wide, Tapered",
+    "weight_size9": 906,
+    "boot_material": "RFM Composite one-piece boot",
+    "blade_holder": "SpeedBlade XS",
+    "steel_type": "STEP V-Steel (+4mm)",
+    "stiffness_rating": 215,
+    "launch_price_usd": 649.99,
+    "current_price_usd": 649.99,
+    "key_features": "One-piece boot POWER, Flex Tendon 3.0, TotalDri Pro liner with Polygiene, Ortholite UltraLite footbed",
+    "notes": "Retro styling meets modern tech; inspired by original CCM 652",
+    "description": "The CCM Tacks 652 blends retro looks with modern performance. Built on a one-piece RFM composite boot with Flex Tendon 3.0, it features a moisture-wicking TotalDri Pro liner treated with Polygiene and a lightweight Ortholite UltraLite footbed. Equipped with SpeedBlade XS holder and STEP V‑Steel runners for sharp edges and efficient strides.",
+    "player_description": "For the beer-leaguer who loves the old-school vibe but still wants the latest pop—these skates look like they belong in a hockey museum, but skate like modern champions."
   }
 }

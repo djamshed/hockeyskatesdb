@@ -3,22 +3,26 @@ fetch("skates.json")
   .then((res) => res.json())
   .then((data) => {
     skateData = data;
-    checkPathForSkate();
-    enableSkateLinks();
+    markClickableModels();
+    checkHashForSkate();
+    enableSkateClicks();
   });
 
-function enableSkateLinks() {
-  document.querySelectorAll(".model a").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const match = link.pathname.match(/^\/skate\/([a-zA-Z0-9\-]+)$/);
-      if (match) {
-        e.preventDefault();
-        const skateId = match[1];
-        if (skateId && skateData[skateId]) {
-          showSkateDetail(skateData[skateId]);
-          window.history.pushState({ skateId }, "", `/skate/${skateId}`);
-        }
-      }
+// Add .clickable to .model if id exists in skates.json
+function markClickableModels() {
+  document.querySelectorAll(".model").forEach((el) => {
+    const skateId = el.id;
+    if (skateId && skateData[skateId]) {
+      el.classList.add("clickable");
+    }
+  });
+}
+
+// Listen for clicks on .model.clickable and update hash
+function enableSkateClicks() {
+  document.querySelectorAll(".model.clickable").forEach((el) => {
+    el.addEventListener("click", function () {
+      window.location.hash = `#skate/${el.id}`;
     });
   });
 }
@@ -30,6 +34,7 @@ function showSkateDetail(skate) {
     <h2 style="margin-top:0">${skate.brand ? skate.brand + " " : ""}${
     skate.model || ""
   }</h2>
+    <p>${skate.notes}</p>
     <ul style="text-align:left;">
       ${
         skate.release_year
@@ -47,19 +52,13 @@ function showSkateDetail(skate) {
           : ""
       }
       ${
-        skate.current_price_usd
-          ? `<li><strong>Current Price:</strong> $${skate.current_price_usd}</li>`
+        skate.key_features
+          ? `<li><strong>Key Features:</strong> ${skate.key_features}</li>`
           : ""
       }
-      ${skate.notes ? `<li><strong>Notes:</strong> ${skate.notes}</li>` : ""}
       ${
         skate.description
           ? `<li><strong>Description:</strong> ${skate.description}</li>`
-          : ""
-      }
-      ${
-        skate.player_description
-          ? `<li><strong>Review:</strong> ${skate.player_description}</li>`
           : ""
       }
       ${
@@ -82,11 +81,6 @@ function showSkateDetail(skate) {
           ? `<li><strong>Fit Options:</strong> ${skate.fit_options}</li>`
           : ""
       }
-      ${
-        skate.key_features
-          ? `<li><strong>Key Features:</strong> ${skate.key_features}</li>`
-          : ""
-      }
     </ul>
   `;
   dialog.showModal();
@@ -97,9 +91,9 @@ function closeSkateDialog() {
   if (dialog && dialog.open) dialog.close();
 }
 
-// Check path for /skate/ID and show/hide dialog accordingly
-function checkPathForSkate() {
-  const match = window.location.pathname.match(/^\/skate\/([a-zA-Z0-9\-]+)$/);
+function checkHashForSkate() {
+  const hash = window.location.hash;
+  const match = hash.match(/^#skate\/([a-zA-Z0-9\-]+)/);
   const skateId = match ? match[1] : null;
   if (skateId && skateData[skateId]) {
     showSkateDetail(skateData[skateId]);
@@ -108,17 +102,88 @@ function checkPathForSkate() {
   }
 }
 
-// Listen for browser navigation (back/forward) and on page load
-window.addEventListener("popstate", checkPathForSkate);
-window.addEventListener("DOMContentLoaded", checkPathForSkate);
+window.addEventListener("hashchange", checkHashForSkate);
+window.addEventListener("DOMContentLoaded", checkHashForSkate);
 
-// Close dialog button
 window.addEventListener("DOMContentLoaded", function () {
   document.getElementById("close-skate-detail").onclick = function () {
     closeSkateDialog();
-    // Remove /skate/... from URL
-    if (window.location.pathname.startsWith("/skate/")) {
-      window.history.pushState({}, "", "/");
+    // Remove hash from URL
+    if (window.location.hash.startsWith("#skate/")) {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
     }
   };
 });
+
+// Add this after your other event listeners:
+window.addEventListener("DOMContentLoaded", function () {
+  const dialog = document.getElementById("skate-detail-dialog");
+
+  // Close dialog when clicking outside the modal content
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) {
+      closeSkateDialog();
+      if (window.location.hash.startsWith("#skate/")) {
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search
+        );
+      }
+    }
+  });
+
+  // Close dialog and clear hash when pressing ESC
+  dialog.addEventListener("close", function () {
+    if (window.location.hash.startsWith("#skate/")) {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+    }
+  });
+});
+
+// Add this function to your skates.js for development/testing only
+function testAllSkateLinks() {
+  const links = Array.from(document.querySelectorAll(".model a"));
+  const dialog = document.getElementById("skate-detail-dialog");
+  let failed = [];
+
+  function testLink(i) {
+    if (i >= links.length) {
+      if (failed.length === 0) {
+        console.log("All links opened the dialog successfully!");
+      } else {
+        console.warn("Links that failed to open the dialog:", failed);
+      }
+      closeSkateDialog();
+      return;
+    }
+    const link = links[i];
+    // Simulate click
+    link.click();
+    setTimeout(() => {
+      // Check if dialog is open and has content
+      if (
+        !dialog.open ||
+        !dialog.querySelector("h2") ||
+        !dialog.querySelector("h2").textContent.trim()
+      ) {
+        console.warn(`Link ${link.href} did not open the dialog correctly.`);
+        failed.push(link.href);
+      }
+      closeSkateDialog();
+      setTimeout(() => testLink(i + 1), 200); // Small delay between tests
+    }, 300); // Wait for dialog to render
+  }
+
+  testLink(0);
+}
+
+// Usage: call testAllSkateLinks() from the browser console or at the end of your script in dev mode
