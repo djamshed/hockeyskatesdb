@@ -34,7 +34,7 @@ function showSkateDetail(skate) {
     <h2 style="margin-top:0">${skate.brand ? skate.brand + " " : ""}${
     skate.model || ""
   }</h2>
-    <p>${skate.notes}</p>
+    ${skate.notes ? `<p style="font-style: italic;">${skate.notes}</p>` : ""}
     <ul style="text-align:left;">
       ${
         skate.release_year
@@ -77,8 +77,8 @@ function showSkateDetail(skate) {
           : ""
       }
       ${
-        skate.fit_options
-          ? `<li><strong>Fit Options:</strong> ${skate.fit_options}</li>`
+        skate.player_description
+          ? `<li><strong>Our opinion:</strong> ${skate.player_description}</li>`
           : ""
       }
     </ul>

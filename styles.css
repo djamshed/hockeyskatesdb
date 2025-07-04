@@ -63,7 +63,48 @@ table td .model {
   color: -webkit-link;
 }
 
-ul {
+.model.clickable {
+  background: #f8f8ff;
+  border-radius: 6px;
+  transition: background 0.2s;
+  cursor: pointer;
+  padding: 6px 0;
+}
+.model.clickable:active,
+.model.clickable:hover {
+  background: #e0e0f8;
+}
+
+#skate-detail-dialog {
+  max-width: 600px;
+  width: 90vw;
+  padding: 20px;
+
+  border-color: gray;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+#skate-detail-dialog ul {
   list-style-type: none;
   padding: 0;
+  line-height: 1.6;
+}
+
+#skate-detail-dialog form {
+  margin: 0;
+  padding: 0;
+}
+
+#skate-detail-dialog button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  cursor: pointer;
 }
