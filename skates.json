@@ -1218,7 +1218,6 @@
     "newer_model": null,
     "id": "true-catalyst-9x4-2024"
   },
-
   "bauer-vapor-fly30-2025": {
     "brand": "Bauer",
     "model": "Vapor Fly30",
@@ -1234,7 +1233,7 @@
     "current_price_usd": 319.99,
     "key_features": "Memory foam ankle padding, lightweight flexible boot, quick-release EDGE holder",
     "notes": "Comfort-focused entry-level skate in the new Vapor line",
-    "description": "The Vapor FLY30 was built for comfort and performance with a forgiving Digi Comp boot, memory‑foam padding around the ankles, and NHL‑caliber quick‑release EDGE holder for easy steel swaps.",
+    "description": "The Vapor FLY30 was built for comfort and performance with a forgiving Digi Comp boot, memory-foam padding around the ankles, and NHL-caliber quick-release EDGE holder for easy steel swaps.",
     "player_description": "Great for the rec player who wants pro-tech vibes without sacrificing comfort—slides smooth and keeps you chasing pucks, not grinding feet.",
     "id": "bauer-vapor-fly30-2025"
   },
@@ -1253,12 +1252,11 @@
     "current_price_usd": 579.99,
     "key_features": "High-end tech from elite line, closer to pro-level",
     "notes": "Bridge between entry-level comfort and pro features",
-    "description": "Positioned above the Fly30, the FLY40 brings best‑in‑class tech from elite Vapor line—think enhanced boot structure and better blade systems—for players wanting more pop.",
-    "player_description": "For the beer‑leaguer who sneaks in extra shift time—these bring a little extra juice in turns and sprints without showing off too much.",
+    "description": "Positioned above the Fly30, the FLY40 brings best-in-class tech from elite Vapor line—think enhanced boot structure and better blade systems—for players wanting more pop.",
+    "player_description": "For the beer-leaguer who sneaks in extra shift time—these bring a little extra juice in turns and sprints without showing off too much.",
     "lower_model": "bauer-vapor-fly30-2025",
     "id": "bauer-vapor-fly40-2025"
   },
-
   "bauer-vapor-flypro-2025": {
     "brand": "Bauer",
     "model": "Vapor FlyPro",
@@ -1274,7 +1272,7 @@
     "current_price_usd": 919.99,
     "key_features": "HyperFlex facing, CURV composite, pro-stock 48oz felt tongue",
     "notes": "Elite skate built for elite-level skating",
-    "description": "The Vapor FLYPRO features a thermoformable CURV composite boot, HyperFlex flex zones in the facing, pro-stock 48‑oz tongue, LockFit Pro liner, and Digi Comp outsole—engineered for explosive agility.",
+    "description": "The Vapor FLYPRO features a thermoformable CURV composite boot, HyperFlex flex zones in the facing, pro-stock 48-oz tongue, LockFit Pro liner, and Digi Comp outsole—engineered for explosive agility.",
     "player_description": "If you warm up like you're in the AHL, these are your skates. Light, quick, and packed with tech—even if your Sunday stats say otherwise.",
     "id": "bauer-vapor-flypro-2025"
   },
@@ -1293,12 +1291,11 @@
     "current_price_usd": 1179.99,
     "key_features": "Lightest elite skate, full elite-level Vapor tech",
     "notes": "Top-tier performance skate",
-    "description": "The Vapor FLYLITE brings all the Vapor tech up to elite level—with even lighter build, max quickness materials, and next‑gen energy return for ultra‑high‑end performance.",
+    "description": "The Vapor FLYLITE brings all the Vapor tech up to elite level—with even lighter build, max quickness materials, and next-gen energy return for ultra-high-end performance.",
     "player_description": "The kind of skate you’d flex on the rec league Instagram feed—speedy, flashy, and unapologetically overbuilt for the beer-sesh.",
     "lower_model": "bauer-vapor-flypro-2025",
     "id": "bauer-vapor-flylite-2025"
   },
-
   "ccm-tacks-652-2024": {
     "brand": "CCM",
     "model": "Tacks 652",
@@ -1314,7 +1311,97 @@
     "current_price_usd": 649.99,
     "key_features": "One-piece boot POWER, Flex Tendon 3.0, TotalDri Pro liner with Polygiene, Ortholite UltraLite footbed",
     "notes": "Retro styling meets modern tech; inspired by original CCM 652",
-    "description": "The CCM Tacks 652 blends retro looks with modern performance. Built on a one-piece RFM composite boot with Flex Tendon 3.0, it features a moisture-wicking TotalDri Pro liner treated with Polygiene and a lightweight Ortholite UltraLite footbed. Equipped with SpeedBlade XS holder and STEP V‑Steel runners for sharp edges and efficient strides.",
+    "description": "The CCM Tacks 652 blends retro looks with modern performance. Built on a one-piece RFM composite boot with Flex Tendon 3.0, it features a moisture-wicking TotalDri Pro liner treated with Polygiene and a lightweight Ortholite UltraLite footbed. Equipped with SpeedBlade XS holder and STEP V-Steel runners for sharp edges and efficient strides.",
     "player_description": "For the beer-leaguer who loves the old-school vibe but still wants the latest pop—these skates look like they belong in a hockey museum, but skate like modern champions."
+  },
+  "ccm-jetspeed-ft870-2025": {
+    "brand": "CCM",
+    "model": "JetSpeed FT870",
+    "release_year": 2025,
+    "player_level": "Performance",
+    "fit_options": "Regular, Wide",
+    "weight_size9": 960,
+    "boot_material": "2D Metaframe Synthetic Composite",
+    "blade_holder": "SpeedBlade XS",
+    "steel_type": "XS1 Stainless Steel",
+    "stiffness_rating": 140,
+    "launch_price_usd": 349.99,
+    "current_price_usd": 349.99,
+    "key_features": "One-piece MetaFrame boot, ADPT memory foam ankles, 7 mm felt tongue with lace-bite, HD microfiber liner",
+    "notes": "Recreational performance skate with elite styling",
+    "description": "The CCM JetSpeed FT870 offers a MetaFrame one-piece boot with ADPT memory foam padding, HD microfiber liner, and a 7 mm felt tongue for lace-bite protection. Equipped with SpeedBlade XS holder and XS1 steel for quick swaps and reliable edges",
+    "player_description": "For the beer-leaguer who wants to step it up a notch—these look sharp, feel great, and won’t tip off your buddies about how often you flop in corners."
+  },
+  "ccm-jetspeed-ft880-2025": {
+    "brand": "CCM",
+    "model": "JetSpeed FT880",
+    "release_year": 2025,
+    "player_level": "Performance",
+    "fit_options": "Regular, Wide",
+    "weight_size9": null,
+    "boot_material": "3D MetaFrame composite one-piece",
+    "blade_holder": "SpeedBlade XS",
+    "steel_type": "XS1 Stainless Steel (+4 mm)",
+    "stiffness_rating": 160,
+    "launch_price_usd": 499.99,
+    "current_price_usd": 499.99,
+    "key_features": "Revised forward pitch, ADPT memory foam, TotalDri Pro liner, 7 mm felt tongue with injected lace-bite",
+    "notes": "Upper-tier performance at mid-tier price",
+    "description": "The Jetspeed FT880 delivers a MetaFrame one-piece boot, ADPT memory foam padding, moisture-wicking TotalDri Pro liner, 7 mm felt tongue with injected lace-bite protection, SpeedBlade XS holder, and XS1 stainless runners with 4 mm extra height. Boot stiffness rating is 160",
+    "player_description": "Comfort meets speed—these skates keep things light and explosive for the mid-pack guy who still wants to feel like a star."
+  },
+  "ccm-jetspeed-ft890-2025": {
+    "brand": "CCM",
+    "model": "JetSpeed FT890",
+    "release_year": 2025,
+    "player_level": "Elite",
+    "fit_options": "Regular, Wide",
+    "weight_size9": null,
+    "boot_material": "One-piece RFM Composite",
+    "blade_holder": "SpeedBlade XS",
+    "steel_type": "STEP V-Steel (+4 mm)",
+    "stiffness_rating": null,
+    "launch_price_usd": 679.99,
+    "current_price_usd": 679.99,
+    "key_features": "One-piece boot, revised forward pitch, ADPT comfort tongue, TotalDri Pro liner, STEP V-Steel runners",
+    "notes": "Elite-level performance with true one-piece feel",
+    "description": "The FT890 offers a one-piece RFM composite boot with a forward pitch for natural stance, ADPT comfort tongue, moisture-wicking liner, and STEP V-Steel blades for edge quality and control",
+    "player_description": "For the guy who’s still got legs on shifts #3 and #4—fast, lightweight, and serious enough to make your goalie stare twice."
+  },
+  "ccm-jetspeed-ft8-2025": {
+    "brand": "CCM",
+    "model": "JetSpeed FT8",
+    "release_year": 2025,
+    "player_level": "Elite",
+    "fit_options": "Tapered, Regular, Wide",
+    "weight_size9": null,
+    "boot_material": "3D molded RFM composite one-piece",
+    "blade_holder": "SpeedBlade XS with enhanced dial",
+    "steel_type": "STEP Steel (+4 mm)",
+    "stiffness_rating": null,
+    "launch_price_usd": 949.99,
+    "current_price_usd": 949.99,
+    "key_features": "Game Ready Fit heel lock, ADPT comfort tongue, TotalDri Pro liner, revised pitch angle",
+    "notes": "Elite-level JetSpeed skate",
+    "description": "The Jetspeed FT8 features a 3D molded RFM composite one-piece boot, Game Ready Fit for superior heel lock, ADPT comfort tongue, moisture-wicking TotalDri Pro liner, and STEP Steel runners for sharp, long-lasting edges",
+    "player_description": "Lightweight and snappy—perfect for the beer leaguer who still thinks they’re the fastest guy on ice."
+  },
+  "ccm-jetspeed-ft8-pro-2025": {
+    "brand": "CCM",
+    "model": "JetSpeed FT8 Pro",
+    "release_year": 2025,
+    "player_level": "Elite",
+    "fit_options": "Tapered, Regular, Wide",
+    "weight_size9": null,
+    "boot_material": "FORS Composite One-Piece",
+    "blade_holder": "SpeedBlade XS w/ dial",
+    "steel_type": "STEP Blacksteel",
+    "stiffness_rating": null,
+    "launch_price_usd": 1229.99,
+    "current_price_usd": 1229.99,
+    "key_features": "FORS one-piece boot, Game Ready Fit, ADPT Comfort Tongue, TotalDri Pro liner, STEP Blacksteel blades",
+    "notes": "Flagship JetSpeed with pro-grade tech",
+    "description": "The FT8 Pro features a FORS composite one-piece boot, aggressive pitch, memory-foam ADPT tongue, moisture-wick liner, and STEP Blacksteel runners for elite glide and edge hold",
+    "player_description": "These are Ferraris for your feet: blister-fast acceleration, sharp turns, and all pro-level bling—even if your post-game highlight is tripping over the bench."
   }
 }
