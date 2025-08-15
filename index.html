@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
     />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
@@ -36,10 +39,50 @@
   </head>
 
   <!-- Place this before </body> -->
-  <dialog id="skate-detail-dialog">
-    <form method="dialog">
+  <dialog
+    id="skate-detail-dialog"
+    style="max-width: 500px; width: 90vw; border-radius: 14px; padding: 0"
+  >
+    <form method="dialog" style="margin: 0; padding: 20px">
       <div id="skate-detail-content"></div>
       <button id="close-skate-detail">&times;</button>
+    </form>
+  </dialog>
+
+  <!-- Video Modal -->
+  <dialog
+    id="video-modal"
+    style="
+      max-width: 800px;
+      width: 95vw;
+      border-radius: 14px;
+      padding: 0;
+      background: #000;
+    "
+  >
+    <form method="dialog" style="margin: 0; padding: 0; position: relative">
+      <div id="video-content" style="position: relative">
+        <!-- Video content will be inserted here -->
+      </div>
+      <button
+        id="close-video"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          font-size: 18px;
+          cursor: pointer;
+          z-index: 11;
+        "
+      >
+        &times;
+      </button>
     </form>
   </dialog>
 
@@ -64,716 +107,1034 @@
         </div>
       </div>
 
-      <table class="pure-table pure-table-bordered">
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Model</th>
-            <th>$0-$200</th>
-            <th>$200-$400</th>
-            <th>$400-$600</th>
-            <th>$600-$800</th>
-            <th>$800-$1000</th>
-            <th>$1000+</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="2">2025</td>
-            <td>Bauer Vapor</td>
-            <td></td>
+      <div class="table-wrapper" style="overflow-x: auto">
+        <table class="pure-table pure-table-bordered">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Model</th>
+              <th>$0-$200</th>
+              <th>$200-$400</th>
+              <th>$400-$600</th>
+              <th>$600-$800</th>
+              <th>$800-$1000</th>
+              <th>$1000+</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">2025</td>
+              <td>Bauer Vapor</td>
+              <td></td>
 
-            <td>
-              <div class="model" id="bauer-vapor-fly30-2025">FLY30</div>
-              <div class="price">$319.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-fly40-2025">FLY40</div>
-              <div class="price">$579.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-vapor-flypro-2025">FLYPRO</div>
-              <div class="price">$919.99</div>
-            </td>
-            <td title="the latest top model in the BAUER Vapor lineup">
-              <div class="model latest" id="bauer-vapor-flylite-2025">
-                FLYLITE &starf;
-              </div>
-              <div class="price">$1,179.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>CCM Jetspeed</td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft870-2025">FT870</div>
-              <div class="price">$349.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft880-2025">FT880</div>
-              <div class="price">$499.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft890-2025">FT890</div>
-              <div class="price">$679.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft8-2025">FT8</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td>
-              <div class="model latest" id="ccm-jetspeed-ft8-pro-2025">
-                FT8 PRO &starf;
-              </div>
-              <div class="price">$1,229.99</div>
-            </td>
-          </tr>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-fly30-2025">
+                  FLY30
+                </button>
+                <div class="price">$319.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-fly40-2025">
+                  FLY40
+                </button>
+                <div class="price">$579.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-flypro-2025">
+                  FLYPRO
+                </button>
+                <div class="price">$919.99</div>
+              </td>
+              <td title="the latest top model in the BAUER Vapor lineup">
+                <button
+                  class="pure-button model latest"
+                  id="bauer-vapor-flylite-2025"
+                >
+                  FLYLITE &starf;
+                </button>
+                <div class="price">$1,179.99</div>
+                <div>
+                  <button
+                    class="pure-button"
+                    onclick="openVideo('reviews/bauer-flylite-2025.mp4')"
+                  >
+                    <span>&#127909;</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CCM Jetspeed</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft870-2025">
+                  FT870
+                </button>
+                <div class="price">$349.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft880-2025">
+                  FT880
+                </button>
+                <div class="price">$499.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft890-2025">
+                  FT890
+                </button>
+                <div class="price">$679.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft8-2025">
+                  FT8
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model latest"
+                  id="ccm-jetspeed-ft8-pro-2025"
+                >
+                  FT8 PRO &starf;
+                </button>
+                <div class="price">$1,229.99</div>
+              </td>
+            </tr>
 
-          <tr>
-            <td rowspan="3">2024</td>
-            <td>Bauer Supreme</td>
-            <td></td>
+            <tr>
+              <td rowspan="3">2024</td>
+              <td>Bauer Supreme</td>
+              <td></td>
 
-            <td>
-              <div class="model" id="bauer-supreme-m30-2024">M30</div>
-              <div class="price">$299.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-m40-2024">M40</div>
-              <div class="price">$499.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-supreme-m50pro-2024">M50 PRO</div>
-              <div class="price">$809.99</div>
-            </td>
-            <td title="the latest top model in the BAUER Supreme lineup">
-              <div class="model latest" id="bauer-supreme-shadow-2024">
-                SHADOW &starf;
-              </div>
-              <div class="price">$1,069.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>CCM Tacks</td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-tacks-xf70-2024">XF70</div>
-              <div class="price">$279.99</div>
-              <div class="model" id="ccm-tacks-xf80-2024">XF80</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-xf90-2024">XF90</div>
-              <div class="price">$549.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-652-2024">652</div>
-              <div class="price">$649.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-xf-2024">XF</div>
-              <div class="price">$849.99</div>
-            </td>
-            <td title="the latest top model in the CCM Jetspeed lineup">
-              <div class="model latest" id="ccm-tacks-xfpro-2024">
-                XF Pro &starf;
-              </div>
-              <div class="price">$1,099.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>True Catalyst</td>
-            <td></td>
-            <td>
-              <div class="model" id="true-catalyst-3x4-2024">3X4</div>
-              <div class="price">$279.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-catalyst-5x4-2024">5X4</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-catalyst-7x4-2024">7X4</div>
-              <div class="price">$799.99</div>
-            </td>
-            <td></td>
-            <td title="the latest top model in the TRUE Catalyst lineup">
-              <div class="model latest" id="true-catalyst-9x4-2024">
-                9X4 &starf;
-              </div>
-              <div class="price">$1,079.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">2023</td>
-            <td>Bauer Vapor</td>
-            <td>
-              <div class="model" id="bauer-vapor-x-2023">X</div>
-              <div class="price">$199.99</div>
-            </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m30-2024">
+                  M30
+                </button>
+                <div class="price">$299.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m40-2024">
+                  M40
+                </button>
+                <div class="price">$499.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="bauer-supreme-m50pro-2024"
+                >
+                  M50 PRO
+                </button>
+                <div class="price">$809.99</div>
+              </td>
+              <td title="the latest top model in the BAUER Supreme lineup">
+                <button
+                  class="pure-button model latest"
+                  id="bauer-supreme-shadow-2024"
+                >
+                  SHADOW &starf;
+                </button>
+                <div class="price">$1,069.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>CCM Tacks</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-xf70-2024">
+                  XF70
+                </button>
+                <div class="price">$279.99</div>
+                <button class="pure-button model" id="ccm-tacks-xf80-2024">
+                  XF80
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-xf90-2024">
+                  XF90
+                </button>
+                <div class="price">$549.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-652-2024">
+                  652
+                </button>
+                <div class="price">$649.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-xf-2024">
+                  XF
+                </button>
+                <div class="price">$849.99</div>
+              </td>
+              <td title="the latest top model in the CCM Jetspeed lineup">
+                <button
+                  class="pure-button model latest"
+                  id="ccm-tacks-xfpro-2024"
+                >
+                  XF Pro &starf;
+                </button>
+                <div class="price">$1,099.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>True Catalyst</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-3x4-2024">
+                  3X4
+                </button>
+                <div class="price">$279.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-5x4-2024">
+                  5X4
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-7x4-2024">
+                  7X4
+                </button>
+                <div class="price">$799.99</div>
+              </td>
+              <td></td>
+              <td title="the latest top model in the TRUE Catalyst lineup">
+                <button
+                  class="pure-button model latest"
+                  id="true-catalyst-9x4-2024"
+                >
+                  9X4 &starf;
+                </button>
+                <div class="price">$1,079.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3">2023</td>
+              <td>Bauer Vapor</td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x-2023">
+                  X
+                </button>
+                <div class="price">$199.99</div>
+              </td>
 
-            <td>
-              <div class="model" id="bauer-vapor-x3-2023">X3</div>
-              <div class="price">$299.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-x4-2023">X4</div>
-              <div class="price">$499.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-x5pro-2023">X5 PRO</div>
-              <div class="price">$799.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-vapor-hyperlite2-2023">
-                HYPERLITE2
-              </div>
-              <div class="price">$1,049.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>CCM Jetspeed</td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft670-2023">FT670</div>
-              <div class="price">$259.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft680-2023">FT680</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft6-2023">FT6</div>
-              <div class="price">$769.99</div>
-            </td>
-            <td></td>
-            <td title="the latest top model in the CCM Jetspeed lineup">
-              <div class="model" id="ccm-jetspeed-ft6pro-2023">FT6 PRO</div>
-              <div class="price">$1,149.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>True HZRDUS</td>
-            <td></td>
-            <td>
-              <div class="model" id="true-hzrdus-5x-2023">5X</div>
-              <div class="price">$279.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-hzrdus-7x-2023">7X</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-hzrdus-9x-2023">9X</div>
-              <div class="price">$759.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x3-2023">
+                  X3
+                </button>
+                <div class="price">$299.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x4-2023">
+                  X4
+                </button>
+                <div class="price">$499.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x5pro-2023">
+                  X5 PRO
+                </button>
+                <div class="price">$799.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="bauer-vapor-hyperlite2-2023"
+                >
+                  HYPERLITE2
+                </button>
+                <div class="price">$1,049.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>CCM Jetspeed</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft670-2023">
+                  FT670
+                </button>
+                <div class="price">$259.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft680-2023">
+                  FT680
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft6-2023">
+                  FT6
+                </button>
+                <div class="price">$769.99</div>
+              </td>
+              <td></td>
+              <td title="the latest top model in the CCM Jetspeed lineup">
+                <button class="pure-button model" id="ccm-jetspeed-ft6pro-2023">
+                  FT6 PRO
+                </button>
+                <div class="price">$1,149.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>True HZRDUS</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="true-hzrdus-5x-2023">
+                  5X
+                </button>
+                <div class="price">$279.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-hzrdus-7x-2023">
+                  7X
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-hzrdus-9x-2023">
+                  9X
+                </button>
+                <div class="price">$759.99</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td rowspan="3">2022</td>
-            <td>Bauer Supreme</td>
-            <td>
-              <div class="model" id="bauer-supreme-m1-2022">M1</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-m3-2022">M3</div>
-              <div class="price">$279.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-m4-2022">M4</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-m5pro-2022">M5 PRO</div>
-              <div class="price">$769.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-supreme-mach-2022">MACH</div>
-              <div class="price">$1,009.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>CCM Tacks</td>
-            <td>
-              <div class="model" id="ccm-tacks-as-550-2022">AS-550</div>
-              <div class="price">$89.99</div>
-              <div class="model" id="ccm-tacks-as-560-2022">AS-560</div>
-              <div class="price">$179.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-as-570-2022">AS-570</div>
-              <div class="price">$279.99</div>
-              <div class="model" id="ccm-tacks-as-580-2022">AS-580</div>
-              <div class="price">$349.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-as-590-2022">AS-590</div>
-              <div class="price">$539.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-tacks-as-v-2022">AS-V</div>
-              <div class="price">$759.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-tacks-as-vpro-2022">AS-V PRO</div>
-              <div class="price">$1,119.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>True Catalyst</td>
-            <td></td>
-            <td>
-              <div class="model" id="true-catalyst-5-2022">5</div>
-              <div class="price">$279.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-catalyst-7-2022">7</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="true-catalyst-9-2022">9</div>
-              <div class="price">$759.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td rowspan="3">2021</td>
-            <td>Bauer Vapor</td>
-            <td>
-              <div class="model" id="bauer-vapor-x35-2021">X3.5</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-x37-2021">X3.7</div>
-              <div class="price">$279.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-3x-2021">3X</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-3xpro-2021">3X PRO</div>
-              <div class="price">$749.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-vapor-hyperlite-2021">HYPERLITE</div>
-              <div class="price">$1,009.99</div>
-            </td>
-          </tr>
-          <tr>
-            <td>CCM Jetspeed</td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft475-2021">FT475</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft485-2021">FT485</div>
-              <div class="price">$379.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft4-2021">FT4</div>
-              <div class="price">$699.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft4-pro-2021">FT4 PRO</div>
-              <div class="price">$999.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM Ribcor</td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-ribcor-86k-2021">86K</div>
-              <div class="price">$229.00</div>
-              <div class="model" id="ccm-ribcor-88k-2021">88K</div>
-              <div class="price">$349.00</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-ribcor-90k-2021">90K</div>
-              <div class="price">$549.00</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-ribcor-100kpro-2021">100K PRO</div>
-              <div class="price">$999.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td rowspan="2">2020</td>
-            <td>Bauer Supreme</td>
-            <td>
-              <div class="model" id="bauer-supreme-s35-2020">S35</div>
-              <div class="price">$159.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s37-2020">S37</div>
-              <div class="price">$229.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-3s-2020">3S</div>
-              <div class="price">$419.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-3spro-2020">3S PRO</div>
-              <div class="price">$629.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-ultrasonic-2020">
-                UltraSonic
-              </div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM SuperTacks</td>
-            <td>
-              <div class="model" id="ccm-supertacks-9350-2020">9350</div>
-              <div class="price">$69.99</div>
-              <div class="model" id="ccm-supertacks-9360-2020">9360</div>
-              <div class="price">$159.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-9370-2020">9370</div>
-              <div class="price">$229.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-9380-2020">9380</div>
-              <div class="price">$359.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-as3-2020">AS3</div>
-              <div class="price">$629.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-as3pro-2020">AS3 PRO</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td rowspan="3">2019</td>
-            <td>Bauer Vapor</td>
-            <td>
-              <div class="model" id="bauer-vapor-ns-2019">NS</div>
-              <div class="price">$59.99</div>
-              <div class="model" id="bauer-vapor-nsx-2019">NSX</div>
-              <div class="price">$99.99</div>
-              <div class="model" id="bauer-vapor-25-2019">2.5</div>
-              <div class="price">$159.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-27-2019">2.7</div>
-              <div class="price">$229.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-29-2019">2.9</div>
-              <div class="price">$359.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-2x-2019">2X</div>
-              <div class="price">$629.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-2xpro-2019">2X PRO</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM JetSpeed</td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft460-2019">FT460</div>
-              <div class="price">$229.99</div>
-              <div class="model" id="ccm-jetspeed-ft470-2019">FT470</div>
-              <div class="price">$329.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft480-2019">FT480</div>
-              <div class="price">$549.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft490-2019">FT490</div>
-              <div class="price">$629.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft2-2019">FT2</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM Ribcor</td>
-            <td>
-              <div class="model" id="ccm-ribcor-74k-19999-74k-2019">74K</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="74k-19999-76k-2019">76K</div>
-              <div class="price">$299.99</div>
-            </td>
-            <td>
-              <div class="model" id="74k-19999-78k-2019">78K</div>
-              <div class="price">$419.99</div>
-            </td>
-            <td>
-              <div class="model" id="74k-19999-80k-2019">80K</div>
-              <div class="price">$749.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td rowspan="3">2018</td>
-            <td>Bauer Supreme</td>
-            <td>
-              <div class="model" id="bauer-supreme-s25-2018">S25</div>
-              <div class="price">$149.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s27-2018">S27</div>
-              <div class="price">$209.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s29-2018">S29</div>
-              <div class="price">$329.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-2s-2018">2S</div>
-              <div class="price">$599.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-2spro-2018">2S PRO</div>
-              <div class="price">$899.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Bauer Nexus</td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-nexus-n2700-2018">N2700</div>
-              <div class="price">$229.99</div>
-              <div class="model" id="bauer-nexus-n2900-2018">N2900</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-nexus-2n-2018">2N</div>
-              <div class="price">$699.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
+            <tr>
+              <td rowspan="3">2022</td>
+              <td>Bauer Supreme</td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m1-2022">
+                  M1
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m3-2022">
+                  M3
+                </button>
+                <div class="price">$279.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m4-2022">
+                  M4
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-m5pro-2022">
+                  M5 PRO
+                </button>
+                <div class="price">$769.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-mach-2022">
+                  MACH
+                </button>
+                <div class="price">$1,009.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>CCM Tacks</td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-as-550-2022">
+                  AS-550
+                </button>
+                <div class="price">$89.99</div>
+                <button class="pure-button model" id="ccm-tacks-as-560-2022">
+                  AS-560
+                </button>
+                <div class="price">$179.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-as-570-2022">
+                  AS-570
+                </button>
+                <div class="price">$279.99</div>
+                <button class="pure-button model" id="ccm-tacks-as-580-2022">
+                  AS-580
+                </button>
+                <div class="price">$349.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-as-590-2022">
+                  AS-590
+                </button>
+                <div class="price">$539.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-as-v-2022">
+                  AS-V
+                </button>
+                <div class="price">$759.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-tacks-as-vpro-2022">
+                  AS-V PRO
+                </button>
+                <div class="price">$1,119.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>True Catalyst</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-5-2022">
+                  5
+                </button>
+                <div class="price">$279.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-7-2022">
+                  7
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="true-catalyst-9-2022">
+                  9
+                </button>
+                <div class="price">$759.99</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">2021</td>
+              <td>Bauer Vapor</td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x35-2021">
+                  X3.5
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x37-2021">
+                  X3.7
+                </button>
+                <div class="price">$279.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-3x-2021">
+                  3X
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-3xpro-2021">
+                  3X PRO
+                </button>
+                <div class="price">$749.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="bauer-vapor-hyperlite-2021"
+                >
+                  HYPERLITE
+                </button>
+                <div class="price">$1,009.99</div>
+              </td>
+            </tr>
+            <tr>
+              <td>CCM Jetspeed</td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft475-2021">
+                  FT475
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft485-2021">
+                  FT485
+                </button>
+                <div class="price">$379.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft4-2021">
+                  FT4
+                </button>
+                <div class="price">$699.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="ccm-jetspeed-ft4-pro-2021"
+                >
+                  FT4 PRO
+                </button>
+                <div class="price">$999.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM Ribcor</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-86k-2021">
+                  86K
+                </button>
+                <div class="price">$229.00</div>
+                <button class="pure-button model" id="ccm-ribcor-88k-2021">
+                  88K
+                </button>
+                <div class="price">$349.00</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-90k-2021">
+                  90K
+                </button>
+                <div class="price">$549.00</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-100kpro-2021">
+                  100K PRO
+                </button>
+                <div class="price">$999.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="2">2020</td>
+              <td>Bauer Supreme</td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s35-2020">
+                  S35
+                </button>
+                <div class="price">$159.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s37-2020">
+                  S37
+                </button>
+                <div class="price">$229.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-3s-2020">
+                  3S
+                </button>
+                <div class="price">$419.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-3spro-2020">
+                  3S PRO
+                </button>
+                <div class="price">$629.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="bauer-supreme-ultrasonic-2020"
+                >
+                  UltraSonic
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM SuperTacks</td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9350-2020">
+                  9350
+                </button>
+                <div class="price">$69.99</div>
+                <button class="pure-button model" id="ccm-supertacks-9360-2020">
+                  9360
+                </button>
+                <div class="price">$159.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9370-2020">
+                  9370
+                </button>
+                <div class="price">$229.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9380-2020">
+                  9380
+                </button>
+                <div class="price">$359.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-as3-2020">
+                  AS3
+                </button>
+                <div class="price">$629.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="ccm-supertacks-as3pro-2020"
+                >
+                  AS3 PRO
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">2019</td>
+              <td>Bauer Vapor</td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-ns-2019">
+                  NS
+                </button>
+                <div class="price">$59.99</div>
+                <button class="pure-button model" id="bauer-vapor-nsx-2019">
+                  NSX
+                </button>
+                <div class="price">$99.99</div>
+                <button class="pure-button model" id="bauer-vapor-25-2019">
+                  2.5
+                </button>
+                <div class="price">$159.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-27-2019">
+                  2.7
+                </button>
+                <div class="price">$229.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-29-2019">
+                  2.9
+                </button>
+                <div class="price">$359.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-2x-2019">
+                  2X
+                </button>
+                <div class="price">$629.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-2xpro-2019">
+                  2X PRO
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM JetSpeed</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft460-2019">
+                  FT460
+                </button>
+                <div class="price">$229.99</div>
+                <button class="pure-button model" id="ccm-jetspeed-ft470-2019">
+                  FT470
+                </button>
+                <div class="price">$329.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft480-2019">
+                  FT480
+                </button>
+                <div class="price">$549.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft490-2019">
+                  FT490
+                </button>
+                <div class="price">$629.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft2-2019">
+                  FT2
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM Ribcor</td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="ccm-ribcor-74k-19999-74k-2019"
+                >
+                  74K
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="74k-19999-76k-2019">
+                  76K
+                </button>
+                <div class="price">$299.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="74k-19999-78k-2019">
+                  78K
+                </button>
+                <div class="price">$419.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="74k-19999-80k-2019">
+                  80K
+                </button>
+                <div class="price">$749.99</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">2018</td>
+              <td>Bauer Supreme</td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s25-2018">
+                  S25
+                </button>
+                <div class="price">$149.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s27-2018">
+                  S27
+                </button>
+                <div class="price">$209.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s29-2018">
+                  S29
+                </button>
+                <div class="price">$329.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-2s-2018">
+                  2S
+                </button>
+                <div class="price">$599.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-2spro-2018">
+                  2S PRO
+                </button>
+                <div class="price">$899.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bauer Nexus</td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-n2700-2018">
+                  N2700
+                </button>
+                <div class="price">$229.99</div>
+                <button class="pure-button model" id="bauer-nexus-n2900-2018">
+                  N2900
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-2n-2018">
+                  2N
+                </button>
+                <div class="price">$699.99</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td>CCM SuperTacks</td>
-            <td>
-              <div class="model" id="ccm-supertacks-9040-2018">9040</div>
-              <div class="price">$79.99</div>
-              <div class="model" id="ccm-supertacks-9050-2018">9050</div>
-              <div class="price">$149.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-9060-2018">9060</div>
-              <div class="price">$209.99</div>
-              <div class="model" id="ccm-supertacks-9070-2018">9070</div>
-              <div class="price">$299.99</div>
-              <div class="model" id="ccm-supertacks-9080-2018">9080</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-9090-2018">9090</div>
-              <div class="price">$549.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-as1-2018">AS1</div>
-              <div class="price">$849.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
+            <tr>
+              <td>CCM SuperTacks</td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9040-2018">
+                  9040
+                </button>
+                <div class="price">$79.99</div>
+                <button class="pure-button model" id="ccm-supertacks-9050-2018">
+                  9050
+                </button>
+                <div class="price">$149.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9060-2018">
+                  9060
+                </button>
+                <div class="price">$209.99</div>
+                <button class="pure-button model" id="ccm-supertacks-9070-2018">
+                  9070
+                </button>
+                <div class="price">$299.99</div>
+                <button class="pure-button model" id="ccm-supertacks-9080-2018">
+                  9080
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-9090-2018">
+                  9090
+                </button>
+                <div class="price">$549.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-as1-2018">
+                  AS1
+                </button>
+                <div class="price">$849.99</div>
+              </td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td rowspan="3">2017</td>
-            <td>Bauer Vapor</td>
-            <td>
-              <div class="model" id="bauer-vapor-x300-2017">X300</div>
-              <div class="price">$79.99</div>
-              <div class="model" id="bauer-vapor-x400-2017">X400</div>
-              <div class="price">$129.99</div>
-            </td>
+            <tr>
+              <td rowspan="3">2017</td>
+              <td>Bauer Vapor</td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x300-2017">
+                  X300
+                </button>
+                <div class="price">$79.99</div>
+                <button class="pure-button model" id="bauer-vapor-x400-2017">
+                  X400
+                </button>
+                <div class="price">$129.99</div>
+              </td>
 
-            <td>
-              <div class="model" id="bauer-vapor-x500-2017">X500</div>
-              <div class="price">$209.99</div>
-              <div class="model" id="bauer-vapor-x600-2017">X600</div>
-              <div class="price">$329.99</div>
-              <div class="model" id="bauer-vapor-x700-2017">X700</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-x800-2017">X800</div>
-              <div class="price">$549.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-x900-2017">X900</div>
-              <div class="price">$749.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-vapor-1x-2017">1X</div>
-              <div class="price">$899.99</div>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM JetSpeed</td>
-            <td>
-              <div class="model" id="ccm-jetspee-ft340-2017">FT340</div>
-              <div class="price">$69.99</div>
-              <div class="model" id="ccm-jetspeed-ft350-2017">FT350</div>
-              <div class="price">$149.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft360-2017">FT360</div>
-              <div class="price">$209.99</div>
-              <div class="model" id="ccm-jetspeed-ft370-2017">FT370</div>
-              <div class="price">$299.99</div>
-              <div class="model" id="ccm-jetspeed-ft380-2017">FT380</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-jetspeed-ft390-2017">FT390</div>
-              <div class="price">$699.99</div>
-            </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x500-2017">
+                  X500
+                </button>
+                <div class="price">$209.99</div>
+                <button class="pure-button model" id="bauer-vapor-x600-2017">
+                  X600
+                </button>
+                <div class="price">$329.99</div>
+                <button class="pure-button model" id="bauer-vapor-x700-2017">
+                  X700
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x800-2017">
+                  X800
+                </button>
+                <div class="price">$549.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-x900-2017">
+                  X900
+                </button>
+                <div class="price">$749.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-vapor-1x-2017">
+                  1X
+                </button>
+                <div class="price">$899.99</div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM JetSpeed</td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspee-ft340-2017">
+                  FT340
+                </button>
+                <div class="price">$69.99</div>
+                <button class="pure-button model" id="ccm-jetspeed-ft350-2017">
+                  FT350
+                </button>
+                <div class="price">$149.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft360-2017">
+                  FT360
+                </button>
+                <div class="price">$209.99</div>
+                <button class="pure-button model" id="ccm-jetspeed-ft370-2017">
+                  FT370
+                </button>
+                <div class="price">$299.99</div>
+                <button class="pure-button model" id="ccm-jetspeed-ft380-2017">
+                  FT380
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-jetspeed-ft390-2017">
+                  FT390
+                </button>
+                <div class="price">$699.99</div>
+              </td>
 
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>CCM Ribcor</td>
-            <td>
-              <div class="model" id="ccm-ribcor-64k-2017">64K</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-ribcor-66k-2017">66K</div>
-              <div class="price">$299.99</div>
-              <div class="model" id="ccm-ribcor-68k-2017">68K</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="ccm-ribcor-70k-2017">70K</div>
-              <div class="price">$699.99</div>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CCM Ribcor</td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-64k-2017">
+                  64K
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-66k-2017">
+                  66K
+                </button>
+                <div class="price">$299.99</div>
+                <button class="pure-button model" id="ccm-ribcor-68k-2017">
+                  68K
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="ccm-ribcor-70k-2017">
+                  70K
+                </button>
+                <div class="price">$699.99</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td rowspan="3">2016</td>
-            <td>Bauer Supreme</td>
-            <td>
-              <div class="model" id="bauer-supreme-s140-2016">S140</div>
-              <div class="price">$69.99</div>
-              <div class="model" id="bauer-supreme-s150-2016">S150</div>
-              <div class="price">$149.99</div>
-              <div class="model" id="bauer-supreme-s160-2016">S160</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s170-2016">S170</div>
-              <div class="price">$299.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s180-2016">S180</div>
-              <div class="price">$499.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-s190-2016">S190</div>
-              <div class="price">$729.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-supreme-1s-2016">1S</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
+            <tr>
+              <td rowspan="3">2016</td>
+              <td>Bauer Supreme</td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s140-2016">
+                  S140
+                </button>
+                <div class="price">$69.99</div>
+                <button class="pure-button model" id="bauer-supreme-s150-2016">
+                  S150
+                </button>
+                <div class="price">$149.99</div>
+                <button class="pure-button model" id="bauer-supreme-s160-2016">
+                  S160
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s170-2016">
+                  S170
+                </button>
+                <div class="price">$299.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s180-2016">
+                  S180
+                </button>
+                <div class="price">$499.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-s190-2016">
+                  S190
+                </button>
+                <div class="price">$729.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-supreme-1s-2016">
+                  1S
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td>Bauer Nexus</td>
-            <td>
-              <div class="model" id="bauer-nexus-n6000-2016">N6000</div>
-              <div class="price">$99.99</div>
-              <div class="model" id="bauer-nexus-n7000-2016">N7000</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-nexus-n8000-2016">N8000</div>
-              <div class="price">$399.99</div>
-            </td>
-            <td>
-              <div class="model" id="bauer-nexus-n9000-2016">N9000</div>
-              <div class="price">$599.99</div>
-            </td>
-            <td></td>
-            <td>
-              <div class="model" id="bauer-nexus-1n-2016">1N</div>
-              <div class="price">$949.99</div>
-            </td>
-            <td></td>
-          </tr>
+            <tr>
+              <td>Bauer Nexus</td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-n6000-2016">
+                  N6000
+                </button>
+                <div class="price">$99.99</div>
+                <button class="pure-button model" id="bauer-nexus-n7000-2016">
+                  N7000
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-n8000-2016">
+                  N8000
+                </button>
+                <div class="price">$399.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-n9000-2016">
+                  N9000
+                </button>
+                <div class="price">$599.99</div>
+              </td>
+              <td></td>
+              <td>
+                <button class="pure-button model" id="bauer-nexus-1n-2016">
+                  1N
+                </button>
+                <div class="price">$949.99</div>
+              </td>
+              <td></td>
+            </tr>
 
-          <tr>
-            <td>CCM SuperTacks</td>
-            <td>
-              <div class="model" id="ccm-supertacks-2092-2016">2092</div>
-              <div class="price">$79.99</div>
-              <div class="model" id="ccm-supertacks-3092-2016">3092</div>
-              <div class="price">$149.99</div>
-              <div class="model" id="ccm-supertacks-4092-2016">4092</div>
-              <div class="price">$199.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-5092-2016">5092</div>
-              <div class="price">$299.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-6092-2016">6092</div>
-              <div class="price">$449.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-ultratacks-2016">
-                UltraTacks
-              </div>
-              <div class="price">$699.99</div>
-            </td>
-            <td>
-              <div class="model" id="ccm-supertacks-supertacks-2016">
-                SuperTacks
-              </div>
-              <div class="price">$899.99</div>
-            </td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td>CCM SuperTacks</td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-2092-2016">
+                  2092
+                </button>
+                <div class="price">$79.99</div>
+                <button class="pure-button model" id="ccm-supertacks-3092-2016">
+                  3092
+                </button>
+                <div class="price">$149.99</div>
+                <button class="pure-button model" id="ccm-supertacks-4092-2016">
+                  4092
+                </button>
+                <div class="price">$199.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-5092-2016">
+                  5092
+                </button>
+                <div class="price">$299.99</div>
+              </td>
+              <td>
+                <button class="pure-button model" id="ccm-supertacks-6092-2016">
+                  6092
+                </button>
+                <div class="price">$449.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="ccm-supertacks-ultratacks-2016"
+                >
+                  UltraTacks
+                </button>
+                <div class="price">$699.99</div>
+              </td>
+              <td>
+                <button
+                  class="pure-button model"
+                  id="ccm-supertacks-supertacks-2016"
+                >
+                  SuperTacks
+                </button>
+                <div class="price">$899.99</div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p>
         This table includes information and regular prices in US dollars sourced
         from BAUER, CCM, TRUE hockey catalogs, as well as well-known hockey

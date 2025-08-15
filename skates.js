@@ -186,4 +186,58 @@ function testAllSkateLinks() {
   testLink(0);
 }
 
-// Usage: call testAllSkateLinks() from the browser console or at the end of your script in dev mode
+// Video Modal Functions
+function openVideo(videoUrl) {
+  const videoModal = document.getElementById("video-modal");
+  const videoContent = document.getElementById("video-content");
+
+  if (videoModal && videoContent) {
+    videoContent.innerHTML = `
+      <video 
+        width="100%" 
+        height="auto" 
+        controls 
+        autoplay
+        style="display: block; max-height: 70vh; border-radius: 14px;">
+        <source src="${videoUrl}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+    videoModal.showModal();
+  }
+}
+
+function closeVideoModal() {
+  const videoModal = document.getElementById("video-modal");
+  const videoContent = document.getElementById("video-content");
+  if (videoModal && videoModal.open) {
+    // Stop video playback by clearing content
+    if (videoContent) {
+      videoContent.innerHTML = "";
+    }
+    videoModal.close();
+  }
+}
+
+// Event listeners for video modal
+window.addEventListener("DOMContentLoaded", function () {
+  const closeVideoBtn = document.getElementById("close-video");
+  if (closeVideoBtn) {
+    closeVideoBtn.addEventListener("click", closeVideoModal);
+  }
+
+  // Close video modal when clicking outside
+  const videoModal = document.getElementById("video-modal");
+  if (videoModal) {
+    videoModal.addEventListener("click", function (e) {
+      if (e.target === videoModal) {
+        closeVideoModal();
+      }
+    });
+
+    // Close video modal when pressing ESC
+    videoModal.addEventListener("close", function () {
+      closeVideoModal();
+    });
+  }
+});

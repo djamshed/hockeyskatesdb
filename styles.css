@@ -1,8 +1,20 @@
+/* ==========================================================================
+   Hockey Skates Database - Styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
 body {
   color: #4b5258;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   padding-bottom: 40px;
 }
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
 
 header {
   background: #fff;
@@ -29,6 +41,10 @@ header {
   gap: 10px;
 }
 
+/* ==========================================================================
+   Table Styles
+   ========================================================================== */
+
 table {
   position: relative;
   font-size: 12px;
@@ -38,48 +54,61 @@ table {
 
 .pure-table th {
   background-color: #e0e0e0;
-  position: sticky;
-  top: 0;
   padding: 1em;
 }
 
-table td .price,
-table td .model {
-  text-align: center;
+.pure-table thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-table td .model {
+table td {
+  text-align: center;
+  vertical-align: top;
+}
+
+/* First and second column vertical alignment */
+table td:nth-child(1),
+table td:nth-child(2) {
+  vertical-align: middle;
+}
+
+button.model {
   font-weight: bold;
-  padding-top: 10px;
+}
+
+.price {
+  color: #666;
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   Interactive Elements
+   ========================================================================== */
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+  color: -webkit-link;
+  border-radius: 6px;
 }
 
 .model.latest {
   color: crimson;
 }
 
-.clickable {
-  cursor: pointer;
-  text-decoration: underline;
-  color: -webkit-link;
-}
-
-.model.clickable {
-  background: #f8f8ff;
-  border-radius: 6px;
-  transition: background 0.2s;
-  cursor: pointer;
-  padding: 6px 0;
-}
-.model.clickable:active,
-.model.clickable:hover {
-  background: #e0e0f8;
-}
+/* ==========================================================================
+   Modal Dialogs
+   ========================================================================== */
 
 #skate-detail-dialog {
   max-width: 600px;
   width: 90vw;
   padding: 20px;
-
   border-color: gray;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -96,15 +125,96 @@ table td .model {
   padding: 0;
 }
 
-#skate-detail-dialog button {
+/* Close buttons for modals */
+#close-skate-detail {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #eee;
+  background: #8f8f8f;
+  color: #fff;
   border: none;
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
+  z-index: 11;
+}
+
+/* ==========================================================================
+   Responsive Design - Tablet (max-width: 800px)
+   ========================================================================== */
+
+@media (max-width: 800px) {
+  .content {
+    padding: 0 8px;
+  }
+
+  /* Work with existing table-wrapper */
+  .table-wrapper {
+    overflow-x: auto !important;
+    position: relative;
+  }
+
+  /* Table scrolling */
+  .pure-table {
+    font-size: 14px;
+    min-width: 600px;
+    border-collapse: collapse;
+  }
+
+  .content > table {
+    white-space: nowrap;
+  }
+
+  /* Force sticky header for mobile */
+  .pure-table thead th {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Design - Mobile (max-width: 600px)
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  /* Base typography */
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+
+  /* Table adjustments */
+  .pure-table {
+    font-size: 12px;
+  }
+
+  .pure-table th,
+  .pure-table td {
+    padding: 6px 4px;
+  }
+
+  /* Filter adjustments */
+  .filter-content {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  /* Modal responsiveness */
+  #skate-detail-dialog {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 2.5vw auto !important;
+    border-radius: 10px !important;
+  }
 }
