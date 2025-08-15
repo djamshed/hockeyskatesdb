@@ -45,24 +45,27 @@ header {
    Table Styles
    ========================================================================== */
 
+/* General table wrapper - no overflow to preserve sticky headers */
+.table-wrapper {
+  position: relative;
+}
+
+/* Handle horizontal scrolling on the content container instead */
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  padding-left: 1em;
+  padding-right: 1em;
+  overflow-x: auto; /* Handle horizontal scrolling here to preserve sticky headers */
+}
+
 table {
   position: relative;
   font-size: 12px;
   margin-bottom: 20px;
   width: 100%;
-}
-
-.pure-table th {
-  background-color: #e0e0e0;
-  padding: 1em;
-}
-
-.pure-table thead th {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 10;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
 }
 
 table td {
@@ -74,6 +77,11 @@ table td {
 table td:nth-child(1),
 table td:nth-child(2) {
   vertical-align: middle;
+}
+
+.pure-table th {
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button.model {
@@ -150,32 +158,14 @@ button.model {
     padding: 0 8px;
   }
 
-  /* Work with existing table-wrapper */
-  .table-wrapper {
-    overflow-x: auto !important;
-    position: relative;
-  }
-
-  /* Table scrolling */
+  /* Table styling for mobile */
   .pure-table {
     font-size: 14px;
     min-width: 600px;
-    border-collapse: collapse;
   }
 
-  .content > table {
+  .pure-table table {
     white-space: nowrap;
-  }
-
-  /* Force sticky header for mobile */
-  .pure-table thead th {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 0 !important;
-    background: #fff !important;
-    z-index: 10 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-    border-bottom: 2px solid #e0e0e0 !important;
   }
 }
 
@@ -194,12 +184,6 @@ button.model {
     margin: 0.5em 0;
   }
 
-  /* Table adjustments */
-  .pure-table {
-    font-size: 12px;
-  }
-
-  .pure-table th,
   .pure-table td {
     padding: 6px 4px;
   }
